@@ -1,0 +1,101 @@
+@media(Max-width:1000px){
+    .container{
+        flex-direction: column;
+    }
+}
+body{
+    background-color: #091540;
+    height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h2{
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+h3{
+    margin: 0;
+    padding: 0;
+    color: #686767;
+}
+.container{
+    display: flex;
+}
+.card{
+    width: 300px;
+    height: 350px;
+    perspective: 1000px;
+    cursor: pointer;
+    margin: 10px;
+}
+.card img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.card-container{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.card:hover .card-container{
+    transform: rotateY(180deg);
+}
+.card-face{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+}
+.container-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0 0 0;
+    padding: 20px;
+}
+.font-face{
+    transform: rotateY(0deg);
+
+}
+.back-face{
+    display: flex;
+    transform: rotateY(180deg);
+}
+.row{
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+    font-size: 2rem;
+}
+.row i{
+    color: #686767;
+}
+.inst:hover{
+    color: #e1306c;
+}
+.tele:hover{
+    color: #171be7;
+}
+.fb:hover{
+    color: #3b5998;
+}
