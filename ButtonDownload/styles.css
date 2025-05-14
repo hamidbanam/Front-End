@@ -1,0 +1,57 @@
+  body {
+    background: #213448;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  button#progressBtn {
+    position: relative;
+    overflow: hidden;
+    background: #547792;
+    border: none;
+    border-radius: 12px;
+    color: rgb(2, 2, 2);
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 16px 48px;
+    width: 260px;
+    height: 55px;
+    box-shadow: 0 6px 15px rgba(45,137,255,0.5);
+    transition: background-color 0.25s ease;
+    user-select: none;
+  }
+  button#progressBtn:disabled {
+    cursor: default;
+    background-color: #94B4C1;
+    box-shadow: none;
+  }
+  button#progressBtn .progress-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    background: linear-gradient(90deg, #ECEFCA 0%, #ecf1b2 100%);
+    border-radius: 12px;
+    z-index: 0;
+    transition: width 0.3s ease;
+  }
+  button#progressBtn .text-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  button#progressBtn .done-icon {
+    display: inline-block;
+    margin-left: 10px;
+    width: 26px;
+    height: 26px;
+    fill: #48A6A7;
+  }
